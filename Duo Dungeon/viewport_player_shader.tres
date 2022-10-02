@@ -1,0 +1,20 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform float playerState : hint_range(0, 1) = 0.0;
+uniform float darken : hint_range(0, 1) = 0.2;
+
+void fragment() {
+	vec4 pixelColor = texture(TEXTURE, UV);
+	float brightness = mix((pixelColor.r + pixelColor.g + pixelColor.b) / (3.0 + ((1.0 - UV.y) * 2.0)), 0.0, darken);
+	vec4 grayscale = vec4(brightness, brightness, brightness, pixelColor.a);
+	COLOR = mix(pixelColor, grayscale, playerState);
+	COLOR.a *= pixelColor.a;
+}"
+
+[resource]
+shader = SubResource( 1 )
+shader_param/playerState = 1.0
+shader_param/darken = 0.2

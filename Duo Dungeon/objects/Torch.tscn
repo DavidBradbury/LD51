@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/masks/circular.png" type="Texture" id=1]
+[ext_resource path="res://assets/torch.png" type="Texture" id=2]
+[ext_resource path="res://objects/Torch.gd" type="Script" id=3]
+[ext_resource path="res://assets/white_8x8.png" type="Texture" id=4]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D:energy")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.3 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "default"
+length = 4.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Light2D:energy")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 2.8 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 2.0, 1.2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Light2D:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, -12 ), Vector2( 1, -15 ) ]
+}
+
+[node name="Torch" type="Sprite"]
+position = Vector2( 164, 123 )
+z_index = -1
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 1 )
+texture_scale = 2.0
+energy = 1.3
+shadow_enabled = true
+shadow_filter_smooth = 3.8
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 1 )
+anims/default = SubResource( 2 )
+
+[node name="White8X8" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.14902, 0.133333, 0.133333, 1 )
+position = Vector2( 2.00001, 6.5 )
+scale = Vector2( 19.5, 16.875 )
+z_index = -2
+texture = ExtResource( 4 )

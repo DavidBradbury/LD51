@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/dungeon-groove-ldjam51.ogg-c8d0235161ac20baba98e02b8a452d2f.oggstr"
+
+[deps]
+
+source_file="res://assets/dungeon-groove-ldjam51.ogg"
+dest_files=[ "res://.import/dungeon-groove-ldjam51.ogg-c8d0235161ac20baba98e02b8a452d2f.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,29 @@
+
+~ Godot Project Starter ~
+https://github.com/jhlothamer/godot_project_starter
+by Jason Lothamer
+
+~ Art ~
+"FREE Keyboard and controllers prompts pack" by xelu (https://opengameart.org/content/free-keyboard-and-controllers-prompts-pack) 
+licensed under CC0 1.0 (http://creativecommons.org/publicdomain/zero/1.0/)
+
+~ Sound ~
+bong_001.ogg from "Interface Sounds" by Kenney
+https://www.kenney.nl/assets/interface-sounds
+License: CC0 1.0 (http://creativecommons.org/publicdomain/zero/1.0/)
+
+~ Font / Avigea ~
+https://www.dafont.com/avigea.font
+https://letterena.com/product/avigea/
+by Letterena Studios
+License: Free for personal use
+
+~ Font / Alagard ~
+https://www.dafont.com/alagard.font
+by Hewett Tsoi
+License: "Give credit if used. That's it."
+
+~ Font / Dogica ~
+https://www.dafont.com/dogica.font
+by Roberto Mocci
+License: OFL (Free for personal and commercial)
